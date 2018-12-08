@@ -17,8 +17,8 @@ before_install:
 - sfdx update
 - sfdx --version
 - sfdx plugins --core
-- sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
-  --username $USERNAME --setdefaultdevhubusername -a MyTPO
+- sfdx force:auth:jwt:grant --clientid 3MVG9KI2HHAq33RwKiBIHBAXVRJmuyvpZFOSmE.PCQRmrfzJi78O5dE06OspIR06DtHdN02CuQ7615RV7ibx8 --jwtkeyfile assets/server.key
+  --username abdulazizkhatri@gmail.com --setdefaultdevhubusername -a MyTPO
 script:
 - sfdx force:org:create -v MyTPO -s -f config/project-scratch-def.json -a ciorg &&
   sfdx force:source:push -u ciorg && sfdx force:apex:test:run -u ciorg -c -r human
